@@ -294,11 +294,11 @@ $(document).ready(function(){
     var processName = sequence[i].n;
     if(sequence[i].n==null)
     {
-      $('#outer-div').append('<div class="block" id="process-'+sequence[i].start +'">CPU Idle<div class="bottom">'+ sequence[i+1].start +'</div></div>');
+      $('#outer-div').append('<div class="block" id="process-'+sequence[i].start +'"><br>CPU Idle<div class="bottom">'+ sequence[i+1].start +'</div></div>');
     }
     else
     {
-      $('#outer-div').append('<div class="block" id="process-'+sequence[i].start +'">P-'+ sequence[i].n +'<div class="bottom">'+ sequence[i+1].start +'</div></div>');
+      $('#outer-div').append('<div class="block" id="process-'+sequence[i].start +'"><br>P-'+ sequence[i].n +'<div class="bottom">'+ sequence[i+1].start +'</div></div>');
     }
     $('#process-'+sequence[i].start).css('width',blockWidth);
 
@@ -316,7 +316,6 @@ $(document).ready(function(){
   text-align: center;
 } */
 th {
-    background-color: #3f913f;
     color: black;
 }
 #b{
@@ -347,7 +346,9 @@ p{
   border-right: 1px solid black;
   float: left;
   text-align: center;
-  background-color: rgba(112, 128, 144, 0.44);
+  font-size: large;
+  font-weight: 800;
+  background-color: rgba(15, 97, 179, 0.44);
   height: 98px;
 }
 #ptab{
@@ -382,7 +383,7 @@ p{
     <div>
       <p>We suggest users to go through the theory related to the topic before running the simulation. <br>To read the theory, click on the button below</p>
       <br>
-      <button type="button" class="btn btn-outline-secondary">Click here to know more</button>
+      <a href="fcfs_theory.html"><button type="button" class="btn btn-outline-secondary">Click here to know more</button></a>
       <br>
       <br>
       <br>
@@ -415,9 +416,7 @@ p{
   <br>
   <div id="outer-div">
   </div>
-  <br><br><br>
-  <br>
-  <br>
+  <br><br><br><br><br><br><br>
 
   <div class="panel-content">
   <table id="ptab" class="table table-bordered table-hover" style="width :600px">
