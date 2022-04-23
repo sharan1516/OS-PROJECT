@@ -53,17 +53,38 @@
       </h2>
       <br><br>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        It is also called the Shortest Remaining Time First (SRTF) algorithm. In this scheduling algorithm, the process with the smallest amount of time remaining until completion is selected to execute. Since the currently executing process is the one with the shortest amount of time remaining by definition, and since that time should only reduce as execution progresses, processes will always run until they complete or a new process is added that requires a smaller amount of time.      </p>
+      <p><b>
+          Advantages: 
+      </b>
+        <ul>
+          <li>
+            Short processes are handled very quickly.
+          </li>
+          <li>
+            The system also requires very little overhead since it only makes a decision when a process completes or a new process is added.
+          </li>
+          <li>
+            When a new process is added the algorithm only needs to compare the currently executing process with the new process, ignoring all other processes currently waiting to execute.
+          </li>
+        </ul>
       </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <p><b>
+        Disadvantages: 
+
+      </b>
+        <ul>
+          <li>
+            Like shortest job first, it has the potential for process starvation.
+          </li>
+          <li>
+            Long processes may be held off indefinitely if short processes are continually added.
+          </li>
+        </ul>
       </p>
       <p>Checkout the simulation of Shortest Remaining Time First Preemptive Scheduling</p>
       <br>
-      <button type="button" class="btn btn-outline-secondary">Click here for simulation</button>
+      <a href="srtf.html"><button" class="btn btn-outline-secondary">Click here for simulation</button></a>
     </div>
 </body>
 </html>
