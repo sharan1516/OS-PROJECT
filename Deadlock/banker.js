@@ -31,11 +31,11 @@ var req = [];
 	card.setAttribute("style","width:auto;float:left;margin-right:50px;height:50px;");
 	var p = document.createElement("div");
 	p.setAttribute("style","width:100px;float:left;");
-	p.textContent="Resource "+(i+1);
+	p.textContent="Total availability of Resource "+(i+1);
 	card.appendChild(p);
 	var inp = document.createElement("input");
 	inp.setAttribute("id","res-"+(i+1));
-	inp.setAttribute("style","text-align:center;margin:auto;float:left;border: 2px solid #609; padding:10px;width: 40px;height: 20px;");
+	inp.setAttribute("style","text-align:center;margin:auto;float:left;border: 2px solid black; padding:10px;width: 40px;height: 20px; border-radius: 10px;");
 	card.appendChild(inp);
 	resources.appendChild(card);
 	}
@@ -54,7 +54,7 @@ var req = [];
 	d1.setAttribute("style","margin-left:10px;float:left;");
 	var p1=document.createElement("card");
 	p1.setAttribute("style","margin-left:10px;float:left;");
-	p1.textContent = "Maximum resources: ";
+	p1.textContent = "Maximum resources needed by the process:   .";
 	d1.appendChild(p1);
 	for(var i=0;i<num;i++){
 	var card =document.createElement("div");
@@ -62,7 +62,7 @@ var req = [];
 	var inp1 = document.createElement("input");
 	inp1.setAttribute("id","MPR"+(i+1));
 	inp1.setAttribute("placeholder","R-"+(i+1));
-	inp1.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;border: 2px solid #609; padding:10px;width: 40px;height: 20px;");
+	inp1.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;border: 2px solid black; padding:10px;width: 40px;height: 20px; border-radius: 10px;");
 	card.appendChild(inp1);
 	d1.appendChild(card);
 	}
@@ -71,7 +71,7 @@ var req = [];
 	d1.setAttribute("style","width:100%;margin-left:10px;float:left;");
 	var p2=document.createElement("card");
 	p2.setAttribute("style","margin-left:20px;float:left;");
-	p2.textContent = "Resources allocated: ";
+	p2.textContent = "Resources already allocated to the process:    . ";
 	d2.appendChild(p2);
 	for(var i=0;i<num;i++){
 	var card =document.createElement("div");
@@ -79,14 +79,15 @@ var req = [];
 	var inp2 = document.createElement("input");
 	inp2.setAttribute("placeholder","R-"+(i+1));
 	inp2.setAttribute("id","APR"+(i+1));
-	inp2.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;border: 2px solid #609; padding:10px;width: 40px;height: 20px;");
+	inp2.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;border: 2px solid black; padding:10px;width: 40px;height: 20px; border-radius: 10px;");
 	card.appendChild(inp2);
 	d2.appendChild(card);
 	}
 	input.appendChild(d2);
 	var but = document.createElement("button");
-	but.textContent = "ADD PROCESS";
+	but.textContent = "Add Process";
 	but.setAttribute("onclick","addToList()");
+	but.setAttribute("class","btn btn-outline-secondary");
 	input.appendChild(but);
 	console.log(num);
 	}
@@ -185,14 +186,14 @@ function addToList() {
 	output.appendChild(br);
 	var d5=document.createElement("div");
 	h = document.createElement("h5");
-	h.textContent = "Safe sequences are :";
+	h.textContent = "Following are the list of safe sequences:";
 	d5.appendChild(h);
-	console.log("Safe sequences are :");
+	console.log("Following are the list of safe sequences:");
 	output.appendChild(d5);
 	var output2 = document.getElementById("output2");
 	var d6=document.createElement("div");
 	h2 = document.createElement("h5");
-	h2.textContent = ".....Request Granted..... ";
+	h2.textContent = "Processes can be executed.";
 	output2.appendChild(h2);
 	}
 	count++;
@@ -433,6 +434,7 @@ function banker(){
 	but.textContent = "continue";
 	but.setAttribute("onclick","add()");
 	but.setAttribute("style","width:100px;text-align:center;margin:auto;float:left;");
+	but.setAttribute("class","btn btn-outline-secondary");
 	operation.appendChild(d3);
 	operation.appendChild(but);
 }
