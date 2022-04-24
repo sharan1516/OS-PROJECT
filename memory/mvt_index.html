@@ -3,6 +3,90 @@
 
 <head>
   <title>MVT-1</title>
+  <style>
+    .button {
+      border-radius: 8px;
+      background-color: #333456;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    
+    .button:hover span {
+      padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    
+    .btn-row {
+        margin-top: 50px;
+        animation-name: FadeOut;
+        animation-duration: 5s;
+    }
+    
+    @keyframes FadeOut {
+      0% {
+        /* position: absolute; */
+        opacity: 0;
+      }
+    
+      75% {
+        /* position: absolute; */
+        opacity: 1;
+      }
+    
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .heading {
+      font-size: 60px;
+      text-align: center;
+      margin-top: 50px;
+      opacity: 1;
+      animation-name: FadeOut;
+      animation-duration: 5s;
+      color: #222831;
+    }
+    
+    .choose {
+      font-size: 30px;
+      text-align: center;
+      margin-top: 90px;
+      opacity: 1;
+      animation-name: FadeOut;
+      animation-duration: 5s;
+      color: rgb(133, 133, 133);
+    }
+    
+    </style>
+    
   <!-- CSS Files -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.css">
@@ -22,17 +106,21 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="../os_sim.html">OS simulator</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="active"><a href="wiki.html">Wiki</a></li>
-      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+        </ul>
+        <button type="button" class="btn btn-outline-success btn-lg btn-radius " 
+      onclick="window.location.href = 'index.html';" style="color: rgb(15, 2, 2);"> 
+        Back to Home
+        </button>
+        </div>
     </div>
-  </nav>
+    </nav>
   <br>
   <div class="container">
     <div class="jumbotron" style="margin-top: 100px">
