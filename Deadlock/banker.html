@@ -33,27 +33,64 @@ p{
   margin-bottom: 1;
 }
 </style>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+	<div class="container-fluid">
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="mynavbar">
+		<ul class="navbar-nav me-auto">
+		  <li class="nav-item">
+			<div class="btn-group">
+			  <button type="button" class="btn btn-outline-warning btn-lg btn-radius dropdown-toggle" style="color: white; background-color: black;" data-bs-toggle="dropdown">Classical Problems</button>
+			  <ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">First Come First Serve</a></li>
+				<li><a class="dropdown-item" href="#">Shortest Job First</a></li>
+				<li><a class="dropdown-item" href="#">Shortest Remaining Time First</a></li>
+				<li><a class="dropdown-item" href="#">Longest Job First</a></li>
+				<li><a class="dropdown-item" href="#">Largest Remaining Time First</a></li>
+				<li><a class="dropdown-item" href="#">Priority Preemptive</a></li>
+				<li><a class="dropdown-item" href="#">Priority Non Preemptive</a></li>
+				<li><a class="dropdown-item" href="#">Compare Algorithms</a></li>
+				<li><a class="dropdown-item" href="#">Round Robin</a></li>
+				<li><a class="dropdown-item" href="#">Highest Response Ratio Next</a></li>
+  
+			  </ul>
+			</div>
+		</li>
+		  <li class="nav-item">
+			<div class="btn-group">
+			<a class="btn btn-outline-warning btn-lg btn-radius" style="color: white; background-color: black;" href="javascript:void(0) ">Team Members</a>
+		  </li>
+		  <li class="nav-item">
+			<div class="btn-group">
+			  <button type="button" class="btn btn-outline-warning btn-lg btn-radius dropdown-toggle" style="color: white; background-color: black;" data-bs-toggle="dropdown">Concepts</button>
+			  <ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Process Scheduling</a></li>
+				<li><a class="dropdown-item" href="#">Deadlocks</a></li>
+				<li><a class="dropdown-item" href="#">Disk Scheduling</a></li>
+				<li><a class="dropdown-item" href="#">Longest Job First</a></li>
+				<li><a class="dropdown-item" href="#">Process Synchronization</a></li>
+				<li><a class="dropdown-item" href="#">MFT and MVT</a></li>
+				<li><a class="dropdown-item" href="#">Non Contiguous Memory Management</a></li>
+				<li><a class="dropdown-item" href="#">File Allocation</a></li>
+  
+			  </ul>
+			</div>
+		  </div>
+		</li>
+		</ul>
+	  <button type="button" class="btn btn-outline-success btn-lg btn-radius" 
+	  onclick="window.location.href = '../index.html';" style="color: rgb(255, 255, 255); background-color:  black;"> 
+		Back to Home
+		</button>  
+	  </div>
+	</div>
+	</nav>
+<br><br><br><br><br><br>
  </head>
  <body>
-	<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-		<div class="container-fluid">
-		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-		  <div class="collapse navbar-collapse" id="mynavbar">
-			<ul class="navbar-nav me-auto">
-			  <li class="nav-item">
-				<a class="nav-link" style="color: white;" href="javascript:void(0)">Contents Page</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" style="color: white;" href="javascript:void(0)">Team Members</a>
-			  </li>
-			</ul>
-			<button type="button" class="btn btn-outline-secondary">Back to Home</button>
-		  </div>
-		</div>
-	  </nav>
-<br><br><br><br><br><br>
+	
 <div class="container">
 	<h1>
 		<b>Banker's Algorithm</b>
