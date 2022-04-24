@@ -42,12 +42,8 @@ display:none;
 	height:50px	;
 	border:solid 2px black;
 	border-radius:8px;
-	/* margin-top:3px;
-	margin-bottom: 20px;
-	margin-left:40%; */
 	color:black;
 	font-weight: normal;
-	/* font-family: "courier new", Times, serif; */
 	font-size: 18px;
 	background: rgb(140, 207, 140);
 }
@@ -365,15 +361,15 @@ border:solid 2px orange;
 	justify-content: center;
 }
 .but_show_graph{
-	background-color: #ff652f;
-	border:solid 2px #ff652f;
-	color:white;
+	background-color: #93e0a6;
+	border:solid 2px #000000;
+	color:black;
+	padding: 1rem;
 	font-weight: bold;
-	margin-left: 20%;
-	margin-top: 5%;
+	margin-left: 0%;
+	margin-top: 0%;
 	border-radius: 8px;
-	
-color: white;
+
 }
 </style>
 
@@ -410,7 +406,7 @@ color: white;
 			<!--<button class="button button6" onclick="optchecked(5)" style="margin-top:9%;position: absolute;">C L O O K</button>-->
 		<!--</div>-->
 
-		<div style="margin-top:10%;height:300px;color:black">
+		<div style="margin-top:1%;height:300px;color:black">
 			<div style="justify-content: center; align-items: center;">
 
 				<h4 style="font-weight: normal ;justify-content: center;  display:flex; flex-direction: row;">Enter the following details</h4>
@@ -431,22 +427,22 @@ color: white;
 			<!-- <input class="tdm-head" type="number" min="0"><br> -->
 			</div>
 			<div class="buttondiv"> 			
-				<button class="tdm-button" style="margin-top: 15rem; margin-right: 5rem;" onclick="myFunction()">Add Request</button><br>
-				<button class="tdm-button" style="margin-top: 15rem;" onclick="calculate()"> Calculate </button>
+				<button class="tdm-button" style="margin-top: 10rem; margin-right: 5rem;" onclick="myFunction()">Add Request</button><br>
+				<button class="tdm-button" style="margin-top: 10rem;" onclick="calculate()"> Calculate </button>
 	</div>
 		</div>
 	</div>
 
-		<input id="tdm-input" class="tdm-hide" type="number" min="0" style="position: absolute;margin-top:10%;left:0%;margin-left:5px;">
-		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:10%;left:9%;margin-left:15px;">
-		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:10%;left:19%;margin-left:15px;">
-		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:10%;left:29%;margin-left:15px;">
-		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:10%;left:39%;margin-left:15px;">
-		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:10%;left:49%;margin-left:15px;">
-		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:10%;left:59%;margin-left:15px;">
-		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:10%;left:69%;margin-left:15px;">
-		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:10%;left:79%;margin-left:15px;">
-		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:10%;left:89%;margin-left:15px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:0%;margin-left:5px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:9%;margin-left:20px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:19%;margin-left:20px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:29%;margin-left:20px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:39%;margin-left:20px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:49%;margin-left:20px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:59%;margin-left:20px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:69%;margin-left:20px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:79%;margin-left:20px;">
+		<input class="tdm-hide" id="tdm-input" type="number" min="0" style="position: absolute;margin-top:5%;left:89%;margin-left:20px;">
 	</div>
 
 
@@ -460,10 +456,10 @@ color: white;
 	<p id="output_clook"></p>
 </div>
 <p id="output"></p>
-<div id="chartContainer" style="height: 300px; width: 60%;margin-left: 20%;border: solid 2px white;margin-top: 20%"></div>
+<div id="chartContainer" style="height: 500px; width: 40%;border: solid 2px white;margin-bottom:3% ; margin-top:10% ;margin-left: 30vw;"></div>
 
-<div class="tdm-hide" id="s_graph">
-	<button class="but_show_graph" onclick="show_graph_section()" style="width: 160px;height:60px;"> Show Header Movement</button>
+<div class="tdm-hide" id="s_graph" style="justify-content: center; display:flex; flex-direction: row;">
+	<button class="but_show_graph" onclick="show_graph_section()" style="width: 160px;height:60px; justify-content: center; display:flex; flex-direction: column;"> Show Header Movement</button>
 </div>
 <!-- modal buttons -->
 <br><br>
