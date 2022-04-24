@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>
-   FCFS Theory
+   SRTF Theory
   </title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -82,47 +82,48 @@
     <div class="container">
       <br><br><br><br>
       <h1>
-        <b>First Come First Serve Scheduling</b>
+        <b>Shortest Remaining Time First Preemptive Scheduling</b>
       </h1>
       <h2>
         Theory
       </h2>
       <br><br>
       <p>
-        First come first serve (FCFS) scheduling algorithm simply schedules the jobs according to their arrival time. The job which comes first in the ready queue will get the CPU first. The lesser the arrival time of the job, the sooner will the job get the CPU. FCFS scheduling may cause the problem of starvation if the burst time of the first process is the longest among all the jobs.
-      </p>
-      <p><b>
 
-        Advantages of First come first serve:
+        It is also called the Shortest Remaining Time First (SRTF) algorithm. In this scheduling algorithm, the process with the smallest amount of time remaining until completion is selected to execute. Since the currently executing process is the one with the shortest amount of time remaining by definition, and since that time should only reduce as execution progresses, processes will always run until they complete or a new process is added that requires a smaller amount of time.      </p>
+      <p><b>
+          Advantages: 
       </b>
         <ul>
           <li>
-            Simple
+            Short processes are handled very quickly.
           </li>
           <li>
-            Easy
+            The system also requires very little overhead since it only makes a decision when a process completes or a new process is added.
           </li>
           <li>
-            First Come First Serve
+            When a new process is added the algorithm only needs to compare the currently executing process with the new process, ignoring all other processes currently waiting to execute.
           </li>
         </ul>
       </p>
       <p><b>
+        Disadvantages: 
 
-        Disadvantages if first come first serve:
       </b>
         <ul>
           <li>
-            FCFS may suffer from the convoy effect if the burst time of the first job is the highest among all.
+            Like shortest job first, it has the potential for process starvation.
           </li>
           <li>
-            Although it is easy to implement, it is poor in performance since the average waiting time is higher as compared to other scheduling algorithms.
+            Long processes may be held off indefinitely if short processes are continually added
+
           </li>
         </ul>
       </p>
-      <p>Checkout the simulation of First Come First Serve Scheduling</p>
+      <p>Checkout the simulation of Shortest Remaining Time First Preemptive Scheduling</p>
       <br>
       <a href="fcfs.html"><button type="button" class="btn btn-outline-secondary">Click here for simulation</button></a>
+main
     </div>
 </body>
 </html>
