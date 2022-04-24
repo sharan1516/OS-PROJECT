@@ -42,14 +42,14 @@ display:none;
 	height:50px	;
 	border:solid 2px black;
 	border-radius:8px;
-	margin-top:3px;
+	/* margin-top:3px;
 	margin-bottom: 20px;
-	margin-left:40%;
-	color:white;
-	font-weight: bold;
-	font-family: "courier new", Times, serif;
+	margin-left:40%; */
+	color:black;
+	font-weight: normal;
+	/* font-family: "courier new", Times, serif; */
 	font-size: 18px;
-	background: linear-gradient(to top right, #84ceeb 0%, #8860d0 100%);
+	background: rgb(140, 207, 140);
 }
 .tdm-footer{
 	margin-left: 30%;
@@ -359,7 +359,11 @@ background-color: orange;
 color: white;
 border:solid 2px orange;
 }
-
+.buttondiv{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
 .but_show_graph{
 	background-color: #ff652f;
 	border:solid 2px #ff652f;
@@ -374,7 +378,7 @@ color: white;
 </style>
 
 </head>
-<body style="background-color: cornsilk">
+<body style="background-color: white">
 
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -390,7 +394,8 @@ color: white;
 <br><br><br>
 <div class="page-header" >
  <h1 align="center" style="font-variant:small-caps;">Disk Scheduling</h1>
-<h3 align="center" style="font-variant:small-caps;background-color: black;color: white">Comparision of Different Algorithms<s/h3>
+
+ <!-- <h3 align="center" style="font-variant:small-caps;background-color: black;color: white">Comparision of Different Algorithms<s/h3> -->
 
 
 </div>
@@ -406,20 +411,29 @@ color: white;
 		<!--</div>-->
 
 		<div style="margin-top:10%;height:300px;color:black">
-		<div style="margin-top:5%;position:absolute;margin-left:10%;">
-			<h4 style="font-weight: bold">Enter the following details</h4>
-			<div style="margin-top:8% ;position: absolute;width: 300px;"><label>HEAD</label><input class="tdm-head" type="number" min="0"></div>
-			<br>
-			<div style="margin-left: 200%;margin-top: -20% ;position: absolute;width:300px;">
-				<h4>Enter the first and last cylinder number</h4>
-			<label>FIRST </label><input class="tdm-head" type="number" min="0"><br>
-			</div >
-			<div style="margin-left: 400%;margin-top: -0% ;position: absolute;width:300px;">
-			<label>LAST </label>
-			<input class="tdm-head" type="number" min="0"><br>
+			<div style="justify-content: center; align-items: center;">
+
+				<h4 style="font-weight: normal ;justify-content: center;  display:flex; flex-direction: row;">Enter the following details</h4>
 			</div>
-			<button class="tdm-button" onclick="myFunction()" style="margin-top: 50%;position: absolute;">Add Request</button><br>
-			<button class="tdm-button" onclick="calculate()" style="margin-left: 300%;position:absolute;margin-top:41%"> Calculate </button>
+		<div style=" justify-content: center; display:flex; flex-direction: row;">
+			<input type='number' min="0" id='at1' placeholder="HEAD" style="padding: 5px; margin: 10px;"></input>
+			<input type='number' min="0" id='at1' placeholder="First cylinder number" style="padding: 5px; margin: 10px;"></input>
+			<input type='number' min="0" id='at1' placeholder="Last cylinder number" style="padding: 5px; margin: 10px;"></input>
+			
+			<!-- <div style="margin-top:8% ;position: absolute;width: 300px;"><label>HEAD</label><input class="tdm-head" type="number" min="0"></div> -->
+			<!-- <div style="margin-left: 200%;margin-top: -20% ;position: absolute;width:300px;">
+				<h4>Enter the first and last cylinder number</h4> -->
+			<!-- <label>FIRST </label><input class="tdm-head" type="number" min="0"><br>
+			</div > -->
+			<!-- <div style="margin-left: 400%;margin-top: -0% ;position: absolute;width:300px;">
+			<label>LAST </label> -->
+			
+			<!-- <input class="tdm-head" type="number" min="0"><br> -->
+			</div>
+			<div class="buttondiv"> 			
+				<button class="tdm-button" style="margin-top: 15rem; margin-right: 5rem;" onclick="myFunction()">Add Request</button><br>
+				<button class="tdm-button" style="margin-top: 15rem;" onclick="calculate()"> Calculate </button>
+	</div>
 		</div>
 	</div>
 

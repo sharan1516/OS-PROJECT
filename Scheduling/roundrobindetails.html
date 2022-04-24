@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Round Robin Scheduling
+  </title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../os_sim.html">OS simulator</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li class="active"><a href="wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+
+<h1 class="h1">Round Robin Scheduling Algorithm</h1>
+<p>Round Robin scheduling algorithm is one of the most popular scheduling algorithm which can actually be implemented in most of the operating systems.
+     This is the <strong>preemptive version</strong> of first come first serve scheduling.
+      The Algorithm focuses on Time Sharing.
+       In this algorithm, every process gets executed in a <strong>cyclic way</strong>.
+        A certain time slice is defined in the system which is called time <strong>quantum</strong>. 
+        Each process present in the ready queue is assigned the CPU for that time quantum, if the execution of the process is completed during that time then the process will <strong>terminate</strong>
+         else the process will go back to the <strong>ready queue</strong> and waits for the next turn to complete the execution.</p>
+
+         <br>
+         <img src="https://static.javatpoint.com/operating-system/images/os-round-robin-scheduling-algorithm.png" alt="os Round Robin Scheduling Algorithm">
+         <br>
+         <h2 class="h2">Advantages</h2>
+
+         <ol class="points">
+            <li>It can be actually implementable in the system because it is not depending on the burst time. </li>
+            <li>It doesn't suffer from the problem of starvation or convoy effect. </li>
+            <li>All the jobs get a fare allocation of CPU.</li>
+            </ol>
+
+            <h2 class="h2">Disadvantages</h2>
+            <ol class="points">
+                <li>The higher the time quantum, the higher the response time in the system. </li>
+                <li>The lower the time quantum, the higher the context switching overhead in the system. </li>
+                <li>Deciding a perfect time quantum is really a very difficult task in the system. </li>
+                </ol>
+<br>
+<button id="next" class="btn"><a href="round-robin.html">Simulation</a></button>
+<br>
+<br>
+
+                <style>
+               
+body{
+  text-align: center;
+  background-image: url("bgrr1.jpg");
+  
+  
+  
+}
+.btn{
+  border-radius:12px;
+  background-color: #8b938b;
+  color:white;
+  border-radius: 20px;
+}
+.block{
+  position: relative;
+  display: none;
+  border-right: 1px solid black;
+  float: left;
+  text-align: center;
+  background-color: rgba(112, 128, 144, 0.44);
+  height: 98px;
+}
+                </style>

@@ -315,10 +315,17 @@ function Dequeue(){
 <style>
 body{
   text-align: center;
+  background-image: url("bgrr1.jpg");
+  
+  
+  
 }
+
 th {
-    background-color: #4CAF50;
+    background-color: #888c88;
     color: white;
+    border-radius: 10px;
+
 }
 #b{
   font-size:2 em;
@@ -328,8 +335,9 @@ h1{
 }
 .btn{
   border-radius:12px;
-  background-color: #4CAF50;
+  background-color: #8b938b;
   color:white;
+  border-radius: 20px;
 }
 p{
   font-size: 3 em;
@@ -368,11 +376,30 @@ p{
 #ep{
   margin-left: 30%;
 }
+h1{
+  font-weight:bold;
+}
 </style>
+<h1>
+  Round Robin algorithm for process Scheduling
+
+</h1>
+<h2>
+  Simulation
+</h2>
+<p>
+  We suggest our users to go through theory related to the topic before running the simulation .
+  <br> to read the theory , click on the button below .
+</p>
+
+<button  id="next" class="btn" class="active"> <a href="roundrobindetails.html"> know more </a></button>
+<br>
+<br>
 <body>
-  <h1>
+
+  <h2>
     Round-Robin Scheduling
-  </h1>
+  </h2>
   <br>
   <h2>
     Gantt Chart
@@ -395,10 +422,15 @@ p{
   </div>
   <input type='number' min="0" id='at1' placeholder="arrival time"></input>
   <input type='number' min="0" id='bt1' placeholder="burst time"></input>
-  <button id="add" class="btn" onclick="AddtoList()">Add</button>
+  <br>
+  <br>
+  <button id="add" class="btn" onclick="AddtoList()">Add Process</button>
+  <br>
   <br>
   <input type='number' min="0" id="tq" placeholder="Time quantum"></input>
-  <button id="start" class="btn">Start</button>
+  <br>
+  <br>
+  <button id="start" class="btn">Start Simulation</button>
   <br>
   <br>
   <div id="outer-div">

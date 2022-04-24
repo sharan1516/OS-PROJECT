@@ -23,19 +23,57 @@
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" style="color: white;" href="javascript:void(0)">Contents Page</a>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-warning btn-lg btn-radius dropdown-toggle" style="color: white; background-color: black;" data-bs-toggle="dropdown">Classical Problems</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">First Come First Serve</a></li>
+              <li><a class="dropdown-item" href="#">Shortest Job First</a></li>
+              <li><a class="dropdown-item" href="#">Shortest Remaining Time First</a></li>
+              <li><a class="dropdown-item" href="#">Longest Job First</a></li>
+              <li><a class="dropdown-item" href="#">Largest Remaining Time First</a></li>
+              <li><a class="dropdown-item" href="#">Priority Preemptive</a></li>
+              <li><a class="dropdown-item" href="#">Priority Non Preemptive</a></li>
+              <li><a class="dropdown-item" href="#">Compare Algorithms</a></li>
+              <li><a class="dropdown-item" href="#">Round Robin</a></li>
+              <li><a class="dropdown-item" href="#">Highest Response Ratio Next</a></li>
+
+            </ul>
+          </div>
+      </li>
+        <li class="nav-item">
+          <div class="btn-group">
+          <a class="btn btn-outline-warning btn-lg btn-radius" style="color: white; background-color: black;" href="javascript:void(0) ">Team Members</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: white;" href="javascript:void(0)">Team Members</a>
-        </li>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-warning btn-lg btn-radius dropdown-toggle" style="color: white; background-color: black;" data-bs-toggle="dropdown">Concepts</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Process Scheduling</a></li>
+              <li><a class="dropdown-item" href="#">Deadlocks</a></li>
+              <li><a class="dropdown-item" href="#">Disk Scheduling</a></li>
+              <li><a class="dropdown-item" href="#">Longest Job First</a></li>
+              <li><a class="dropdown-item" href="#">Process Synchronization</a></li>
+              <li><a class="dropdown-item" href="#">MFT and MVT</a></li>
+              <li><a class="dropdown-item" href="#">Non Contiguous Memory Management</a></li>
+              <li><a class="dropdown-item" href="#">File Allocation</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </li>
       </ul>
-      <button type="button" class="btn btn-outline-secondary">Back to Home</button>
+    <button type="button" class="btn btn-outline-success btn-lg btn-radius" 
+    onclick="window.location.href = '../index.html';" style="color: rgb(255, 255, 255); background-color:  black;"> 
+      Back to Home
+      </button>  
     </div>
   </div>
-</nav>
+  </nav>
 <br><br><br>
 
 <script>
+
+
   /*FCFS SCHEDULING*/
 
 var sequence=[];
@@ -294,11 +332,11 @@ $(document).ready(function(){
     var processName = sequence[i].n;
     if(sequence[i].n==null)
     {
-      $('#outer-div').append('<div class="block" id="process-'+sequence[i].start +'">CPU Idle<div class="bottom">'+ sequence[i+1].start +'</div></div>');
+      $('#outer-div').append('<div class="block" id="process-'+sequence[i].start +'"><br>CPU Idle<div class="bottom">'+ sequence[i+1].start +'</div></div>');
     }
     else
     {
-      $('#outer-div').append('<div class="block" id="process-'+sequence[i].start +'">P-'+ sequence[i].n +'<div class="bottom">'+ sequence[i+1].start +'</div></div>');
+      $('#outer-div').append('<div class="block" id="process-'+sequence[i].start +'"><br>P-'+ sequence[i].n +'<div class="bottom">'+ sequence[i+1].start +'</div></div>');
     }
     $('#process-'+sequence[i].start).css('width',blockWidth);
 
@@ -316,7 +354,6 @@ $(document).ready(function(){
   text-align: center;
 } */
 th {
-    background-color: #3f913f;
     color: black;
 }
 #b{
@@ -347,7 +384,9 @@ p{
   border-right: 1px solid black;
   float: left;
   text-align: center;
-  background-color: rgba(112, 128, 144, 0.44);
+  font-size: large;
+  font-weight: 800;
+  background-color: rgba(15, 97, 179, 0.44);
   height: 98px;
 }
 #ptab{
@@ -382,7 +421,7 @@ p{
     <div>
       <p>We suggest users to go through the theory related to the topic before running the simulation. <br>To read the theory, click on the button below</p>
       <br>
-      <button type="button" class="btn btn-outline-secondary">Click here to know more</button>
+      <a href="fcfs_theory.html"><button type="button" class="btn btn-outline-secondary">Click here to know more</button></a>
       <br>
       <br>
       <br>
@@ -415,9 +454,7 @@ p{
   <br>
   <div id="outer-div">
   </div>
-  <br><br><br>
-  <br>
-  <br>
+  <br><br><br><br><br><br><br>
 
   <div class="panel-content">
   <table id="ptab" class="table table-bordered table-hover" style="width :600px">
