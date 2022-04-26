@@ -132,7 +132,7 @@
 
 .but3{
 	position:absolute;
-	margin-left:46%;
+	margin-left:35%;
 	margin-top:22%;
 	border-radius: 40px;
 }
@@ -141,7 +141,7 @@
 .but4{
 	
 	position:absolute;
-	margin-left:63%;
+	margin-left:46.5%;
 	margin-top:22%;
 	border-radius: 40px;
 }
@@ -149,7 +149,7 @@
 .but5{
 	
 	position:absolute;
-	margin-left:80%;
+	margin-left:64%;
 	margin-top:22%;
 	border-radius: 40px;
 }
@@ -192,7 +192,8 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="../Syncronization/prod.html">Producer Consumer Problem</a>
             <a class="dropdown-item" href="../Syncronization/dining.html">Dining Philospher Problem</a>
-            <a class="dropdown-item" href="../Syncronization/Barrier.html">Barrier Semaphore Problem</a>
+           
+		
             <a class="dropdown-item" href="../Syncronization/writerreader.html">Reader Writer Problem</a>
             <a class="dropdown-item" href="../Syncronization/sleeping.html">Sleeping Barber Problem</a>                       
         </div>
@@ -229,15 +230,13 @@
 
 		<button class="button1 button2 but1" onclick="change(0)"><span>Producer Consumer </span></button>
 		<button class="button1 button2 but2" onclick="change(1)"><span>Dining Philosopher</span></button>
-		<button class="button1 button2 but3" onclick="change(2)"><span>Barrier Semaphore </span></button>
 		<button class="button1 button2 but4" onclick="change(3)"><span>Reader Writer </span></button>
 		<button class="button1 button2 but5" onclick="change(4)"><span>Sleeping Barber</span></button>
 
 		<img src="producer.jpg" alt="" style="position:absolute;left:12%;top:35%;width:200px;height:190px;">
 		<img src="dining.jpg" alt="" style="position:absolute;left:29%;top:35%;width:200px;height:190px;">
-		<img src="barrier.jpeg" alt="" style="position:absolute;left:47%;top:33%;width:200px;height:190px;">
-		<img src="reader.jpeg" alt="" style="position:absolute;left:63%;top:35%;width:200px;height:190px;">
-		<img src="barber.png" alt="" style="position:absolute;left:80%;top:35%;width:200px;height:190px;">
+		<img src="reader.jpeg" alt="" style="position:absolute;left:47%;top:35%;width:200px;height:190px;">
+		<img src="barber.png" alt="" style="position:absolute;left:65%;top:35%;width:200px;height:190px;">
 	
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -256,12 +255,6 @@
 			if(but_num == 1)
 			{
 				window.location = "dining.html";
-			}
-
-			
-			if(but_num == 2)
-			{
-				window.location = "Barrier.html";
 			}
 
 			if(but_num == 3)
